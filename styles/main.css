@@ -277,6 +277,10 @@ svg * {
   }
 }
 
+html.is-lock {
+  overflow: hidden;
+}
+
 body {
   font-size: clamp(0.875rem, 0.8112745098rem + 0.2614379085vw, 1.125rem);
   font-family: var(--font-family-base);
@@ -493,10 +497,25 @@ button[aria-label]::before {
   width: 55%;
 }
 
+.header {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  animation-name: scrolling-header;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: 6.25rem 12.5rem;
+}
+@keyframes scrolling-header {
+  to {
+    box-shadow: 0 0 2rem 1rem var(--color-dark-40);
+  }
+}
 .header__promo {
   padding-block: 1.25rem;
   text-align: center;
   border-bottom: var(--border);
+  background-color: var(--color-dark);
 }
 @media (width <= 47.99875rem) {
   .header__promo {
