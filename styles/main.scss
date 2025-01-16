@@ -18,9 +18,15 @@
 @use "blocks/advantage-card";
 @use "blocks/hero";
 
+@use "blocks/tag";
+@use "blocks/section";
+@use "blocks/list";
+@use "blocks/tile";
+@use "blocks/card";
+
 
 .header,
 .footer,
-.hero {
+main > *:not(:last-child) {
   display: none !important;
 }
