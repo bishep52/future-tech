@@ -15,13 +15,8 @@
   visibility: visible;
 }
 
-@mixin flex-center($isInline) {
-  @if $isInline {
-    display: inline-flex;
-  } @else {
-    display: flex;
-  }
-
+@mixin flex-center {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -63,13 +58,20 @@
   overflow: hidden !important;
 }
 
-@mixin full-vw-centered-line($property: top) {
+@mixin full-vw-centered-line(
+  $property: top,
+  $left: 50%,
+  $right: auto,
+  $translate: -50%,
+) {
   position: relative;
 
   &::before {
-    @include abs-x;
-
     content: "";
+    position: absolute;
+    left: $left;
+    right: $right;
+    translate: $translate;
     #{$property}: 0;
     width: 100vw;
     height: rem(1);
