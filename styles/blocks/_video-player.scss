@@ -9,6 +9,10 @@
     object-fit: cover;
     border-radius: rem(12);
 
+    &--small {
+      height: fluid(290, 208);
+    }
+
     @include laptop {
       border-radius: rem(10);
     }
