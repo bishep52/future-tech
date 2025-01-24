@@ -24,6 +24,11 @@
     padding: rem(30);
     transition-duration: var(--transition-duration);
 
+    &--center {
+      justify-content: center;
+      align-items: center;
+    }
+
     &:not(.is-active) {
       @include hide;
     }
