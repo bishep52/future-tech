@@ -41,14 +41,14 @@
       }
     }
 
+    &:user-invalid {
+      border-color: var(--color-red);
+    }
+
     &::after {
       content: "✔";
       color: var(--color-light);
       transition-duration: var(--transition-duration);
     }
-  }
-
-  &__label {
-
   }
 }

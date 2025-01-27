@@ -2,6 +2,8 @@
 
 .select {
   &__original-control {
+    min-width: rem(85);
+
     @include mobile-above {
       @include visually-hidden;
     }
