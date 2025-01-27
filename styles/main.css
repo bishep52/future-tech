@@ -1101,7 +1101,7 @@ button[aria-label]::before {
   grid-area: resources-preview;
   padding-left: 5rem;
   padding-bottom: 5rem;
-  background: url("./../images/resources-preview/bg.png") 0 0/cover no-repeat;
+  background: url("../images/resources-preview/bg.png") 0 0/cover no-repeat;
 }
 @media (width <= 90.06125rem) {
   .hero__resources-preview {
